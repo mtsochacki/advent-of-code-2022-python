@@ -1,11 +1,7 @@
 def look_for_packet(buffer, length):
-    chunks = []
     for i in range(len(buffer)):
-        chunks.append(buffer[i:i + length])
-    for chunk in chunks:
-        set_of_chunk_characters = set(chunk)
-        if len(set_of_chunk_characters) == length:
-            return buffer.find(chunk) + length
+        if len(set(buffer[i:i + length])) == length:
+            return i + length
 
 
 if __name__ == '__main__':
