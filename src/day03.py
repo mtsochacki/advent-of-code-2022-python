@@ -17,6 +17,6 @@ def part2(compartments):
 
 
 if __name__ == '__main__':
-    list_of_compartments = open("../resources/day03.txt", "r").read().splitlines()
+    list_of_compartments = open("resources/day03.txt").read().splitlines()
     print(part1(list_of_compartments))
     print(part2(list_of_compartments))

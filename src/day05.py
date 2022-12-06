@@ -1,7 +1,8 @@
 import re
 
+
 def part1():
-    f = open("../resources/day05.txt").read().split("\n\n")
+    f = open("resources/day05.txt").read().split("\n\n")
     first_half, second_half = f[0], f[1]
 
     stacks = first_half.splitlines()
@@ -34,19 +35,20 @@ def part1():
     instructions = second_half.splitlines()
     coordinates = []
     for line in instructions:
-        line = re.sub("[^ | 0-9]", "", line)
+        line = re.sub("[^ |0-9]", "", line)
         line = line.strip()
         a = line.split()
         coordinates.append(a)
     for line in coordinates:
         for i in range(int(line[0])):
-            crate = list_of_towers[int(line[1])-1].pop(0)
-            list_of_towers[int(line[2])-1].insert(0, crate)
+            crate = list_of_towers[int(line[1]) - 1].pop(0)
+            list_of_towers[int(line[2]) - 1].insert(0, crate)
     for tower in list_of_towers:
         print(tower[0], end="")
 
+
 def part2():
-    f = open("../resources/day05.txt").read().split("\n\n")
+    f = open("resources/day05.txt").read().split("\n\n")
     first_half, second_half = f[0], f[1]
     stacks = first_half.splitlines()
     stacks.pop()
@@ -78,7 +80,7 @@ def part2():
     instructions = second_half.splitlines()
     coordinates = []
     for line in instructions:
-        line = re.sub("[^ | 0-9]", "", line)
+        line = re.sub("[^ |0-9]", "", line)
         line = line.strip()
         a = line.split()
         coordinates.append(a)
@@ -96,4 +98,3 @@ def part2():
 if __name__ == '__main__':
     part1()
     part2()
-

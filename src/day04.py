@@ -21,6 +21,6 @@ def part2(assignments):
 
 
 if __name__ == '__main__':
-    pair_assignments = open("../resources/day04.txt", "r").read().splitlines()
+    pair_assignments = open("resources/day04.txt", "r").read().splitlines()
     print(part1(pair_assignments))
     print(part2(pair_assignments))

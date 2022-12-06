@@ -7,6 +7,6 @@ def calculate_sums_of_calories(list_of_elf_inventories):
 
 
 if __name__ == '__main__':
-    source_file = open("../resources/day01.txt", "r").read().split("\n\n")
+    source_file = open("resources/day01.txt", "r").read().split("\n\n")
     print(calculate_sums_of_calories(source_file)[-1:])
     print(sum(calculate_sums_of_calories(source_file)[-3:]))

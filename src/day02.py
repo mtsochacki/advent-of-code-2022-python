@@ -35,6 +35,6 @@ def part2(strategy_guide):
 
 
 if __name__ == '__main__':
-    lines = open("../resources/day02.txt", "r").read().split("\n")
+    lines = open("resources/day02.txt", "r").read().split("\n")
     print(part1(lines))
     print(part2(lines))
